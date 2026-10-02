@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Guide étudiant — ISG Bizerte</title>
+<style>
+*{box-sizing:border-box} body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f3f6fa;color:#172033}
+.wrap{max-width:1100px;margin:auto;padding:24px}
+.hero{background:linear-gradient(135deg,#17324d,#285a7d);color:#fff;border-radius:20px;padding:30px}
+.hero h1{margin:5px 0 8px;font-size:32px} .hero p{margin:0;opacity:.9}
+.search{width:100%;margin-top:20px;padding:15px;border:0;border-radius:12px;font-size:16px}
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}
+button{border:1px solid #d7e0ea;background:#fff;border-radius:10px;padding:11px 14px;cursor:pointer}
+button.active{background:#17324d;color:#fff}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.card{background:#fff;border:1px solid #dbe4ee;border-radius:15px;padding:18px;box-shadow:0 2px 7px #00000008}
+.card h3{margin:8px 0;font-size:18px} .card p{line-height:1.5}
+.tag{display:inline-block;background:#eaf1f8;color:#35516c;padding:5px 9px;border-radius:20px;font-size:12px;font-weight:bold}
+.who{font-weight:bold;color:#2563eb} .desc{color:#64748b}
+.footer{margin-top:25px;padding:16px;background:#fff;border-radius:12px;color:#64748b;font-size:13px}
+@media(max-width:650px){.wrap{padding:14px}.hero h1{font-size:25px}.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<section class="hero">
+<div style="font-size:12px;letter-spacing:2px">ISG BIZERTE • GUIDE D’ORIENTATION</div>
+<h1>« J’ai un problème… qui peut m’aider ? »</h1>
+<p>Guide pratique pour aider les nouveaux étudiants à trouver rapidement le bon service ou interlocuteur.</p>
+<input id="search" class="search" placeholder="Rechercher : absence, e-mail, examen, stage, inscription…" aria-label="Rechercher">
+</section>
+<div class="toolbar">
+<button class="active" data-cat="Tous">Tous</button>
+<button data-cat="Administration">Administration</button><button data-cat="Bibliothèque">Bibliothèque</button><button data-cat="Carrière &amp; 4C">Carrière &amp; 4C</button><button data-cat="Départements">Départements</button><button data-cat="Numérique">Numérique</button><button data-cat="Pédagogie">Pédagogie</button><button data-cat="Scolarité">Scolarité</button><button data-cat="Vie étudiante">Vie étudiante</button><button data-cat="Études">Études</button>
+</div>
+<section id="grid" class="grid"><article class="card" data-search="scolarité j’ai raté un devoir pour une raison justifiée direction des études / chef de département consulter l’avis relatif aux absences, préparer le justificatif, puis s’adresser à la direction des études ou au chef de département.">
+      <span class="tag">Scolarité</span>
+      <h3>J’ai raté un devoir pour une raison justifiée</h3>
+      <p class="who">→ Direction des études / Chef de département</p>
+      <p class="desc">Consulter l’avis relatif aux absences, préparer le justificatif, puis s’adresser à la direction des études ou au chef de département.</p>
+    </article><article class="card" data-search="scolarité quelles sont les conditions d’élimination d’un module ? règlement intérieur / scolarité consulter le règlement intérieur signé lors de l’inscription et demander une clarification à la scolarité si nécessaire.">
+      <span class="tag">Scolarité</span>
+      <h3>Quelles sont les conditions d’élimination d’un module ?</h3>
+      <p class="who">→ Règlement intérieur / Scolarité</p>
+      <p class="desc">Consulter le règlement intérieur signé lors de l’inscription et demander une clarification à la scolarité si nécessaire.</p>
+    </article><article class="card" data-search="administration obtenir une lettre d’affectation secrétariat général faire une demande auprès du secrétariat général et suivre la procédure administrative communiquée.">
+      <span class="tag">Administration</span>
+      <h3>Obtenir une lettre d’affectation</h3>
+      <p class="who">→ Secrétariat général</p>
+      <p class="desc">Faire une demande auprès du secrétariat général et suivre la procédure administrative communiquée.</p>
+    </article><article class="card" data-search="études j’ai des doutes sur les conditions de réussite responsable de la scolarité / régime lmd se référer au régime lmd et consulter le responsable de la scolarité pour confirmer les conditions applicables.">
+      <span class="tag">Études</span>
+      <h3>J’ai des doutes sur les conditions de réussite</h3>
+      <p class="who">→ Responsable de la scolarité / Régime LMD</p>
+      <p class="desc">Se référer au régime LMD et consulter le responsable de la scolarité pour confirmer les conditions applicables.</p>
+    </article><article class="card" data-search="pédagogie je n’ai pas compris une notion du cours enseignant concerné commencer par demander une explication à l’enseignant concerné. si besoin, demander ensuite une orientation pédagogique.">
+      <span class="tag">Pédagogie</span>
+      <h3>Je n’ai pas compris une notion du cours</h3>
+      <p class="who">→ Enseignant concerné</p>
+      <p class="desc">Commencer par demander une explication à l’enseignant concerné. Si besoin, demander ensuite une orientation pédagogique.</p>
+    </article><article class="card" data-search="numérique je n’arrive pas à accéder à mon e-mail support informatique / administration vérifier ses identifiants puis contacter le support informatique ou le service indiqué par l’administration.">
+      <span class="tag">Numérique</span>
+      <h3>Je n’arrive pas à accéder à mon e-mail</h3>
+      <p class="who">→ Support informatique / Administration</p>
+      <p class="desc">Vérifier ses identifiants puis contacter le support informatique ou le service indiqué par l’administration.</p>
+    </article><article class="card" data-search="carrière &amp; 4c je veux participer à des formations certifiantes centre 4c se renseigner auprès du 4c sur les formations, certifications et modalités d’inscription disponibles.">
+      <span class="tag">Carrière &amp; 4C</span>
+      <h3>Je veux participer à des formations certifiantes</h3>
+      <p class="who">→ Centre 4C</p>
+      <p class="desc">Se renseigner auprès du 4C sur les formations, certifications et modalités d’inscription disponibles.</p>
+    </article><article class="card" data-search="carrière &amp; 4c je cherche un stage ou une aide pour mon cv centre 4c prendre contact avec le 4c pour l’accompagnement cv, projet professionnel, stage et employabilité.">
+      <span class="tag">Carrière &amp; 4C</span>
+      <h3>Je cherche un stage ou une aide pour mon CV</h3>
+      <p class="who">→ Centre 4C</p>
+      <p class="desc">Prendre contact avec le 4C pour l’accompagnement CV, projet professionnel, stage et employabilité.</p>
+    </article><article class="card" data-search="départements question sur ma formation ou mon département chef de département / responsable pédagogique identifier son département puis contacter le responsable pédagogique compétent.">
+      <span class="tag">Départements</span>
+      <h3>Question sur ma formation ou mon département</h3>
+      <p class="who">→ Chef de département / Responsable pédagogique</p>
+      <p class="desc">Identifier son département puis contacter le responsable pédagogique compétent.</p>
+    </article><article class="card" data-search="vie étudiante je veux participer à la vie étudiante clubs / associations / administration se renseigner sur les clubs, associations et activités étudiantes de l’établissement.">
+      <span class="tag">Vie étudiante</span>
+      <h3>Je veux participer à la vie étudiante</h3>
+      <p class="who">→ Clubs / Associations / Administration</p>
+      <p class="desc">Se renseigner sur les clubs, associations et activités étudiantes de l’établissement.</p>
+    </article><article class="card" data-search="bibliothèque je cherche des ressources pour étudier bibliothèque / ressources documentaires identifier la ressource recherchée et se renseigner sur les modalités de consultation, de prêt ou d’accès.">
+      <span class="tag">Bibliothèque</span>
+      <h3>Je cherche des ressources pour étudier</h3>
+      <p class="who">→ Bibliothèque / Ressources documentaires</p>
+      <p class="desc">Identifier la ressource recherchée et se renseigner sur les modalités de consultation, de prêt ou d’accès.</p>
+    </article><article class="card" data-search="administration j’ai une question sur mon dossier ou mon inscription scolarité / administration consulter les consignes officielles, préparer les pièces demandées et suivre la procédure indiquée.">
+      <span class="tag">Administration</span>
+      <h3>J’ai une question sur mon dossier ou mon inscription</h3>
+      <p class="who">→ Scolarité / Administration</p>
+      <p class="desc">Consulter les consignes officielles, préparer les pièces demandées et suivre la procédure indiquée.</p>
+    </article></section>
+<div class="footer"><strong>À compléter avec les informations officielles de l’ISGB :</strong> noms des responsables, bureaux, étages, horaires, e-mails, numéros de téléphone et plan physique du campus. Les parcours ci-dessus doivent être validés par l’administration avant diffusion officielle.</div>
+</div>
+<script>
+const cards=[...document.querySelectorAll('.card')], search=document.getElementById('search');
+let cat='Tous';
+function render(){
+ const q=search.value.toLowerCase().trim();
+ cards.forEach(c=>{
+   const okCat=cat==='Tous'||c.querySelector('.tag').textContent===cat;
+   const okSearch=!q||c.dataset.search.includes(q);
+   c.style.display=okCat&&okSearch?'block':'none';
+ });
+}
+document.querySelectorAll('.toolbar button').forEach(b=>b.onclick=()=>{
+ document.querySelectorAll('.toolbar button').forEach(x=>x.classList.remove('active'));
+ b.classList.add('active'); cat=b.dataset.cat; render();
+});
+search.oninput=render;
+</script>
+</body>
+</html>
